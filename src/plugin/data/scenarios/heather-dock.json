@@ -1,0 +1,197 @@
+{
+  "id": "heather-dock",
+  "category": "multi_rule",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book my flight home from Dubai on December 10. I'd like business class for the long flight if the university allows it; otherwise economy.",
+  "trip": {
+    "traveller_name": "Dr. Farah Nasser",
+    "traveller_title": "Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "DXB",
+    "destination": "MCO",
+    "leg": "RETURN",
+    "travel_date": "2026-12-10",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-10",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Flight home from the water-reuse workshop in Dubai (December 7-9)",
+    "purpose_kind": "WORKSHOP",
+    "schedule": [
+      {
+        "starts_local": "2026-12-11 08:00",
+        "ends_local": "2026-12-11 17:00",
+        "what": "Work at the main campus"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": [
+      "Outbound: flew Orlando to Dubai on December 5 and landed December 6 at 19:10; the workshop began December 7 at 08:30, 13 hours later."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "home",
+        "origin": "DXB",
+        "destination": "MCO",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ek": {
+            "carrier": "EK",
+            "depart": "08:30",
+            "minutes": [
+              990
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "09:45",
+            "minutes": [
+              960,
+              90
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              110
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "ek-economy",
+            "flight": "ek",
+            "cabin": "ECONOMY",
+            "fare_cents": 118000
+          },
+          {
+            "slot": "ek-business",
+            "flight": "ek",
+            "cabin": "BUSINESS",
+            "fare_cents": 449000
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 109500
+          },
+          {
+            "slot": "dl-business",
+            "flight": "dl",
+            "cabin": "BUSINESS",
+            "fare_cents": 427000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "dl-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "VICE_PRESIDENT",
+      "WORKTAG_MANAGER"
+    ],
+    "clauses": [
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Flight home: both tickets carry a flight over nine hours, and work at headquarters resumes December 11 08:00, 16 hours after Emirates lands (16:00) and 12 hours after Delta lands (20:05); the outbound test was met too, so every reading of 'arrival at the destination and/or return to headquarters' allows business. Approvals on file: Delta business 427000.",
+  "answer_key_inputs": {
+    "outbound_hours": 13
+  }
+}

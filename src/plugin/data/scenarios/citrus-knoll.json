@@ -1,0 +1,183 @@
+{
+  "id": "citrus-knoll",
+  "category": "easy",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book the cheapest flight the policy allows to Denver on December 8. The conference opens the next morning.",
+  "trip": {
+    "traveller_name": "Kendra Moss",
+    "traveller_title": "Assistant Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "DEN",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-11",
+    "days_away": 4,
+    "booking_date": "2026-11-23",
+    "purpose": "Paper presentation at the Rocky Mountain Combustion Conference, Denver",
+    "purpose_kind": "CONFERENCE",
+    "schedule": [
+      {
+        "starts_local": "2026-12-09 08:30",
+        "ends_local": "2026-12-09 17:30",
+        "what": "Conference sessions, day one"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "DEN",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "wn": {
+            "carrier": "WN",
+            "depart": "07:05",
+            "minutes": [
+              275
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "06:10",
+            "minutes": [
+              95,
+              210
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              70
+            ]
+          },
+          "ua": {
+            "carrier": "UA",
+            "depart": "11:40",
+            "minutes": [
+              280
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 16900,
+            "refundable": true
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 17600
+          },
+          {
+            "slot": "ua-economy",
+            "flight": "ua",
+            "cabin": "ECONOMY",
+            "fare_cents": 19400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "dl-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "REFUNDABLE_FARE_NOT_ALLOWED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "INTRODUCTION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    },
+    {
+      "lines": [
+        122,
+        122
+      ],
+      "sha256": "27f3c7d204e433f20bef88c1355399d2081e881b4846de8050b5ad3dee624cef",
+      "quote": "• Airfare: Non-refundable economy ticket only.",
+      "why": "airfare: a non-refundable economy ticket only"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        423,
+        424
+      ],
+      "quote": "Reasonable costs include, but are not limited to, baggage fees, and seat selection fees.",
+      "why": "bag and seat fees are allowable, not a fare choice"
+    }
+  ],
+  "design_notes": "Southwest's 16900 fare is refundable, and lines 122 and 422 allow only a non-refundable economy ticket; the lowest non-refundable economy fare is Delta's connection through Atlanta at 17600. The conference opens the next morning, so the landing time decides nothing."
+}

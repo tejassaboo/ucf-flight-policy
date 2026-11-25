@@ -1,0 +1,163 @@
+{
+  "id": "pecan-shoal",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My meeting date in Boston might still move, so I'd like a refundable ticket for December 9 if possible; if not, book what the policy allows.",
+  "trip": {
+    "traveller_name": "Lauren Pike",
+    "traveller_title": "Program Coordinator",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Office of Research",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "BOS",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-09",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-11",
+    "days_away": 3,
+    "booking_date": "2026-11-23",
+    "purpose": "Consortium planning meeting at Northeastern University, Boston",
+    "purpose_kind": "MEETING",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 09:00",
+        "ends_local": "2026-12-10 16:00",
+        "what": "Consortium planning meeting"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": true,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "BOS",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "b6": {
+            "carrier": "B6",
+            "depart": "07:45",
+            "minutes": [
+              165
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "06:30",
+            "minutes": [
+              95,
+              135
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              60
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "b6-economy",
+            "flight": "b6",
+            "cabin": "ECONOMY",
+            "fare_cents": 21800
+          },
+          {
+            "slot": "b6-refundable",
+            "flight": "b6",
+            "cabin": "ECONOMY",
+            "fare_cents": 38900,
+            "refundable": true
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 24300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "b6-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "REFUNDABLE_FARE_NOT_ALLOWED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "INTRODUCTION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        122,
+        122
+      ],
+      "sha256": "27f3c7d204e433f20bef88c1355399d2081e881b4846de8050b5ad3dee624cef",
+      "quote": "• Airfare: Non-refundable economy ticket only.",
+      "why": "airfare: a non-refundable economy ticket only"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        464,
+        464
+      ],
+      "quote": "Any costs incurred by UCF for changes to an airline ticket should be justified.",
+      "why": "change costs, not the fare choice"
+    }
+  ],
+  "design_notes": "Lines 122 and 422: airline tickets must be non-refundable economy; the refundable fare is declined and the lowest non-refundable economy fare is JetBlue's 21800."
+}

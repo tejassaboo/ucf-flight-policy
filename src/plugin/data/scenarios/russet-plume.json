@@ -1,0 +1,158 @@
+{
+  "id": "russet-plume",
+  "category": "flag",
+  "overlays": [
+    "multi_leg",
+    "date_arithmetic",
+    "outside_air_section",
+    "approval_required"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "kestrel-sound",
+    "citrus-knoll"
+  ],
+  "ambiguity_note": "none: the provost's or vice president's approval for a stay over thirty days is missing; the text is clear",
+  "request": "Please book my flight to Bogota on January 4 for my six-week field study; I'll be there until February 14.",
+  "trip": {
+    "traveller_name": "Dr. Camila Rojas",
+    "traveller_title": "Assistant Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Anthropology",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "BOG",
+    "leg": "OUTBOUND",
+    "travel_date": "2027-01-04",
+    "fallback_date": "",
+    "trip_end_date": "2027-02-14",
+    "days_away": 42,
+    "booking_date": "2026-11-23",
+    "purpose": "Ethnographic field study in Bogota, January 4 - February 14",
+    "purpose_kind": "RESEARCH",
+    "schedule": [
+      {
+        "starts_local": "2027-01-05 09:00",
+        "ends_local": "2027-01-05 17:00",
+        "what": "Field work begins"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": [
+      "The Spend Authorization was filed under the standard individual-trip travel type."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "BOG",
+        "date": "2027-01-04",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "av": {
+            "carrier": "AV",
+            "depart": "10:20",
+            "minutes": [
+              235
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "07:10",
+            "minutes": [
+              70,
+              195
+            ],
+            "via": [
+              "MIA"
+            ],
+            "layovers": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "av-economy",
+            "flight": "av",
+            "cabin": "ECONOMY",
+            "fare_cents": 38500
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 36200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "aa-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "EXTENDED_STAY_APPROVAL"
+    ],
+    "approvers": [
+      "PROVOST",
+      "VICE_PRESIDENT"
+    ],
+    "clauses": [
+      "EXTENDED_STAY",
+      "SPEND_AUTHORIZATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1251,
+        1253
+      ],
+      "sha256": "e385c600da46fbce5cdb8d833ce76b3f5984068413c1fadb507b8804d39ef123",
+      "quote": "Employee travel for more than thirty (30) days to a single location requires approval from the provost or appropriate vice president. Provost approval can be obtained by selecting the corresponding travel type for travel greater than 30 days on the spend authorization.",
+      "why": "over thirty days at one location needs the provost or a vice president"
+    },
+    {
+      "lines": [
+        194,
+        198
+      ],
+      "sha256": "3066d7b7525b8dc8291a78a14e0ec6a624e4c6de1c495bde345fec1364ee99f8",
+      "quote": "Per Florida Statute §112.061, travel on UCF business must be authorized in advance of travel start date. A Spend Authorization is the university's formal document for the approval to incur travel expenses and request travel and field advances. Spend Authorizations must be submitted in and fully approved before making commitments to travel or incurring expenses for traveling.",
+      "why": "travel is authorized in advance by a fully approved Spend Authorization"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The trip lasts 42 days at one location: more than thirty days needs the provost's or the appropriate vice president's approval (1251-1253), and the Spend Authorization on file (cost center manager, standard travel type) does not give it. Hold the lowest fare, American via Miami 36200, for that approval."
+}

@@ -1,0 +1,203 @@
+{
+  "id": "fennel-moor",
+  "category": "boundary_twin",
+  "overlays": [
+    "date_arithmetic",
+    "month_end"
+  ],
+  "twin_of": "juniper-wake",
+  "twin_fact": "workshop starts 08:30 or 10:30 on December 1 (23 or 25 hours after landing)",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book business class to Doha on November 29 for the desalination workshop; the approvals are in. If business isn't allowed, economy is fine.",
+  "trip": {
+    "traveller_name": "Dr. Yusuf Karim",
+    "traveller_title": "Assistant Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "DOH",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-11-29",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-04",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Desalination research workshop at Qatar University, Doha",
+    "purpose_kind": "WORKSHOP",
+    "schedule": [
+      {
+        "starts_local": "2026-12-01 10:30",
+        "ends_local": "2026-12-01 17:00",
+        "what": "Workshop, day one"
+      },
+      {
+        "starts_local": "2026-12-02 08:30",
+        "ends_local": "2026-12-02 17:00",
+        "what": "Workshop, day two"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "DOH",
+        "date": "2026-11-29",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "qr": {
+            "carrier": "QR",
+            "depart": "13:00",
+            "minutes": [
+              750
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "16:20",
+            "minutes": [
+              150,
+              700
+            ],
+            "via": [
+              "PHL"
+            ],
+            "layovers": [
+              95
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "qr-economy",
+            "flight": "qr",
+            "cabin": "ECONOMY",
+            "fare_cents": 109000
+          },
+          {
+            "slot": "qr-business",
+            "flight": "qr",
+            "cabin": "BUSINESS",
+            "fare_cents": 398000
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 103500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "aa-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "TRAVELER_PAYS_UPGRADE",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "VICE_PRESIDENT",
+      "WORKTAG_MANAGER"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The workshop begins December 1 at 10:30, 25 hours after the Qatar flight lands (November 30 09:30): not within 24 hours, so business is not acceptable even with approvals. Economy: American's connection at 103500."
+}

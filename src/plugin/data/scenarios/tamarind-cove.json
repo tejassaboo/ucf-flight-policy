@@ -1,0 +1,197 @@
+{
+  "id": "tamarind-cove",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "saguaro-bend",
+  "twin_fact": "LATAM nonstop scheduled 540 or 539 minutes",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book business class to Sao Paulo on December 8 for the biofuels workshop; the approvals are in. If business isn't allowed, economy is fine.",
+  "trip": {
+    "traveller_name": "Dr. Ines Carvalho",
+    "traveller_title": "Associate Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "GRU",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-12",
+    "days_away": 5,
+    "booking_date": "2026-11-23",
+    "purpose": "Biofuels research workshop at the University of Sao Paulo",
+    "purpose_kind": "WORKSHOP",
+    "schedule": [
+      {
+        "starts_local": "2026-12-09 13:00",
+        "ends_local": "2026-12-09 18:00",
+        "what": "Workshop opening sessions"
+      },
+      {
+        "starts_local": "2026-12-10 08:30",
+        "ends_local": "2026-12-10 17:30",
+        "what": "Workshop sessions"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "GRU",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "la": {
+            "carrier": "LA",
+            "depart": "21:30",
+            "minutes": [
+              540
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "19:10",
+            "minutes": [
+              70,
+              505
+            ],
+            "via": [
+              "MIA"
+            ],
+            "layovers": [
+              85
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "la-economy",
+            "flight": "la",
+            "cabin": "ECONOMY",
+            "fare_cents": 101500
+          },
+          {
+            "slot": "la-business",
+            "flight": "la",
+            "cabin": "BUSINESS",
+            "fare_cents": 312000
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 96500
+          },
+          {
+            "slot": "aa-business",
+            "flight": "aa",
+            "cabin": "BUSINESS",
+            "fare_cents": 287000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "la-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "VICE_PRESIDENT",
+      "WORKTAG_MANAGER"
+    ],
+    "clauses": [
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "LATAM's nonstop is scheduled for exactly 540 minutes: 'nine hours or longer' is inclusive, so its business fare qualifies; the workshop opens the afternoon it lands (08:30). American's business fare is cheaper but its flights are 70 and 505 minutes, none nine hours, so it does not qualify. Approvals are on file: LATAM business 312000."
+}

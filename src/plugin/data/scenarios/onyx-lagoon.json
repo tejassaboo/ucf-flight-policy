@@ -1,0 +1,228 @@
+{
+  "id": "onyx-lagoon",
+  "category": "flag",
+  "overlays": [
+    "multi_leg",
+    "unclear_phrase"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "heather-dock",
+    "fennel-moor"
+  ],
+  "ambiguity_note": {
+    "phrase": "and/or return to headquarters",
+    "readings": [
+      "'and/or': business beginning within 24 hours of arrival at the destination is enough, so the business approved for the trip covers the flight home too",
+      "for the flight home the test is the return to headquarters, where work resumes more than 24 hours after landing, so the flight home is economy"
+    ]
+  },
+  "request": "Please book my flight home from Dubai on December 10. I'd like business class for the long flight if the university allows it; otherwise economy.",
+  "trip": {
+    "traveller_name": "Dr. Omar Siddiqui",
+    "traveller_title": "Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "DXB",
+    "destination": "MCO",
+    "leg": "RETURN",
+    "travel_date": "2026-12-10",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-10",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Flight home from the water-reuse workshop in Dubai (December 7-9)",
+    "purpose_kind": "WORKSHOP",
+    "schedule": [
+      {
+        "starts_local": "2026-12-14 08:00",
+        "ends_local": "2026-12-14 17:00",
+        "what": "Work at the main campus"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": [
+      "Outbound: flew Orlando to Dubai on December 5 and landed December 6 at 19:10; the workshop began December 7 at 08:30, 13 hours later.",
+      "Friday December 11 is a day of annual leave; work at the main campus resumes Monday December 14."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "home",
+        "origin": "DXB",
+        "destination": "MCO",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ek": {
+            "carrier": "EK",
+            "depart": "08:30",
+            "minutes": [
+              990
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "09:45",
+            "minutes": [
+              960,
+              90
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              110
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "ek-economy",
+            "flight": "ek",
+            "cabin": "ECONOMY",
+            "fare_cents": 118000
+          },
+          {
+            "slot": "ek-business",
+            "flight": "ek",
+            "cabin": "BUSINESS",
+            "fare_cents": 449000
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 109500
+          },
+          {
+            "slot": "dl-business",
+            "flight": "dl",
+            "cabin": "BUSINESS",
+            "fare_cents": 427000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "dl-business",
+      "dl-economy"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "FINANCE_BUSINESS_CENTER",
+      "NOT_NAMED",
+      "TRAVEL_EXPERTISE_CENTER"
+    ],
+    "clauses": [
+      "TRAVEL_EXCEPTIONS",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": "and/or return to headquarters"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    },
+    {
+      "lines": [
+        437,
+        439
+      ],
+      "sha256": "2aef7f0cb1f6a570178af582cbaabe8088ea55e7f61cc41774c50b3b29908385",
+      "quote": "If a traveler has questions regarding allowable upgrades, they should contact their respective Finance Business Center or Travel Center of Expertise at travelfa@ucf.edu prior to booking the flight.",
+      "why": "upgrade questions go to the Finance Business Center or the Travel Center of Expertise"
+    },
+    {
+      "lines": [
+        1264,
+        1267
+      ],
+      "sha256": "eefb1de91e4e0bcf93b6f8b8f084928176136383af0a0ab86c5462c049297ddc",
+      "quote": "Exceptions to this policy require prior approval by the Travel Center of Expertise and maybe in consultation with the Provost's Office, UCF Global, Officer of the Institution Equity (OIE) or the Office of Enterprise Risk and Insurance, as appropriate. Approved exceptions must be documented in writing and included with the corresponding expense report.",
+      "why": "exceptions need the Travel Center of Expertise's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The flight home lands Thursday 16:00 (Emirates) or 20:05 (Delta), and work at headquarters resumes Monday 08:00, more than 24 hours later; on the way out, the workshop began 13 hours after landing. 'arrival at the destination and/or return to headquarters' (432-433) either lets the met destination test carry the trip (business) or applies the headquarters test to the flight home (economy).",
+  "answer_key_inputs": {
+    "outbound_hours": 13
+  }
+}

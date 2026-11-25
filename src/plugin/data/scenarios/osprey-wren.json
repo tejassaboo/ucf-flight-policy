@@ -1,0 +1,177 @@
+{
+  "id": "osprey-wren",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me first class to Los Angeles on December 8 for the advisory board meeting on the 9th. If the policy doesn't allow it, book what it allows; I have to be at the meeting.",
+  "trip": {
+    "traveller_name": "Dr. Celeste Arnaud",
+    "traveller_title": "Dean's Fellow and Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "LAX",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-10",
+    "days_away": 3,
+    "booking_date": "2026-11-23",
+    "purpose": "Industry advisory board meeting, Los Angeles",
+    "purpose_kind": "MEETING",
+    "schedule": [
+      {
+        "starts_local": "2026-12-09 09:00",
+        "ends_local": "2026-12-09 15:00",
+        "what": "Advisory board meeting"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "FIRST",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "LAX",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aa": {
+            "carrier": "AA",
+            "depart": "08:15",
+            "minutes": [
+              330
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "07:00",
+            "minutes": [
+              95,
+              270
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              75
+            ]
+          },
+          "wn": {
+            "carrier": "WN",
+            "depart": "10:30",
+            "minutes": [
+              335
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 31800
+          },
+          {
+            "slot": "aa-first",
+            "flight": "aa",
+            "cabin": "FIRST",
+            "fare_cents": 98000
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 29900
+          },
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 30500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "dl-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FIRST_CLASS_NOT_ALLOWED",
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        430,
+        430
+      ],
+      "sha256": "fad0ff47f39d3d21e5a188a12b7ae79ea3808db1dece1cb764c9daf1d4982e3b",
+      "quote": "• First class transportation, or higher, is NOT allowed.",
+      "why": "first class or higher is not allowed"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 430: first class transportation, or higher, is NOT allowed; no business fare qualifies either. The traveller asks for what the policy allows: the lowest economy fare, Delta's 29900."
+}

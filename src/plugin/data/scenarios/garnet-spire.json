@@ -1,0 +1,200 @@
+{
+  "id": "garnet-spire",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me first class to Tokyo on December 8 for the robotics symposium. If first isn't allowed, book the best the policy allows; the business-class approvals are in, and I have to be at the symposium on the 10th.",
+  "trip": {
+    "traveller_name": "Dr. Kenji Mori",
+    "traveller_title": "Professor and Department Chair",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "NRT",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-14",
+    "days_away": 7,
+    "booking_date": "2026-11-23",
+    "purpose": "Keynote at the international robotics symposium, Tokyo",
+    "purpose_kind": "CONFERENCE",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 09:00",
+        "ends_local": "2026-12-10 17:30",
+        "what": "Symposium, day one"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "FIRST",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "NRT",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "jl": {
+            "carrier": "JL",
+            "depart": "11:00",
+            "minutes": [
+              840
+            ]
+          },
+          "nh": {
+            "carrier": "NH",
+            "depart": "13:30",
+            "minutes": [
+              830
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "jl-economy",
+            "flight": "jl",
+            "cabin": "ECONOMY",
+            "fare_cents": 138000
+          },
+          {
+            "slot": "jl-business",
+            "flight": "jl",
+            "cabin": "BUSINESS",
+            "fare_cents": 612000
+          },
+          {
+            "slot": "jl-first",
+            "flight": "jl",
+            "cabin": "FIRST",
+            "fare_cents": 1180000
+          },
+          {
+            "slot": "nh-economy",
+            "flight": "nh",
+            "cabin": "ECONOMY",
+            "fare_cents": 131000
+          },
+          {
+            "slot": "nh-business",
+            "flight": "nh",
+            "cabin": "BUSINESS",
+            "fare_cents": 598000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "nh-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "FIRST_CLASS_NOT_ALLOWED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "VICE_PRESIDENT",
+      "WORKTAG_MANAGER"
+    ],
+    "clauses": [
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        430,
+        430
+      ],
+      "sha256": "fad0ff47f39d3d21e5a188a12b7ae79ea3808db1dece1cb764c9daf1d4982e3b",
+      "quote": "• First class transportation, or higher, is NOT allowed.",
+      "why": "first class or higher is not allowed"
+    },
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 430: first class is NOT allowed, even with approvals. Business class qualifies (830- and 840-minute nonstops; the symposium begins within 24 hours of either landing) and is approved by all three (434-435): the best the policy allows is the lowest business fare, ANA's 598000."
+}

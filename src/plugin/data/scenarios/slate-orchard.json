@@ -1,0 +1,226 @@
+{
+  "id": "slate-orchard",
+  "category": "flag",
+  "overlays": [
+    "date_arithmetic",
+    "unclear_phrase"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "juniper-wake",
+    "fennel-moor"
+  ],
+  "ambiguity_note": {
+    "phrase": "full -time business activity",
+    "readings": [
+      "the official reception is business activity of the trip and begins within 24 hours, so business class is acceptable",
+      "full-time activity means the working sessions, which begin more than 24 hours after landing, so the flight is economy"
+    ]
+  },
+  "request": "Please book business class to Doha on December 8 for the desalination workshop; the approvals are in. If business isn't allowed, economy is fine.",
+  "trip": {
+    "traveller_name": "Dr. Layla Haddad",
+    "traveller_title": "Assistant Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "DOH",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-13",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Desalination research workshop at Qatar University, Doha",
+    "purpose_kind": "WORKSHOP",
+    "schedule": [
+      {
+        "starts_local": "2026-12-09 19:00",
+        "ends_local": "2026-12-09 21:00",
+        "what": "Welcome reception for workshop participants"
+      },
+      {
+        "starts_local": "2026-12-10 13:00",
+        "ends_local": "2026-12-10 18:00",
+        "what": "Workshop sessions"
+      },
+      {
+        "starts_local": "2026-12-11 08:30",
+        "ends_local": "2026-12-11 17:00",
+        "what": "Workshop sessions"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "DOH",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "qr": {
+            "carrier": "QR",
+            "depart": "13:00",
+            "minutes": [
+              750
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "16:20",
+            "minutes": [
+              150,
+              700
+            ],
+            "via": [
+              "PHL"
+            ],
+            "layovers": [
+              95
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "qr-economy",
+            "flight": "qr",
+            "cabin": "ECONOMY",
+            "fare_cents": 109000
+          },
+          {
+            "slot": "qr-business",
+            "flight": "qr",
+            "cabin": "BUSINESS",
+            "fare_cents": 398000
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 103500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "aa-economy",
+      "qr-business"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "FINANCE_BUSINESS_CENTER",
+      "NOT_NAMED",
+      "TRAVEL_EXPERTISE_CENTER"
+    ],
+    "clauses": [
+      "TRAVEL_EXCEPTIONS",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": "full -time business activity"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    },
+    {
+      "lines": [
+        437,
+        439
+      ],
+      "sha256": "2aef7f0cb1f6a570178af582cbaabe8088ea55e7f61cc41774c50b3b29908385",
+      "quote": "If a traveler has questions regarding allowable upgrades, they should contact their respective Finance Business Center or Travel Center of Expertise at travelfa@ucf.edu prior to booking the flight.",
+      "why": "upgrade questions go to the Finance Business Center or the Travel Center of Expertise"
+    },
+    {
+      "lines": [
+        1264,
+        1267
+      ],
+      "sha256": "eefb1de91e4e0bcf93b6f8b8f084928176136383af0a0ab86c5462c049297ddc",
+      "quote": "Exceptions to this policy require prior approval by the Travel Center of Expertise and maybe in consultation with the Provost's Office, UCF Global, Officer of the Institution Equity (OIE) or the Office of Enterprise Risk and Insurance, as appropriate. Approved exceptions must be documented in writing and included with the corresponding expense report.",
+      "why": "exceptions need the Travel Center of Expertise's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Qatar lands December 9 09:30; the welcome reception (two hours) starts 9.5 hours later, the first workshop session 27.5 hours later. Whether a reception is 'full -time business activity' (432) decides business against economy."
+}

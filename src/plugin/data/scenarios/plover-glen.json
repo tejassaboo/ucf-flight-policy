@@ -1,0 +1,197 @@
+{
+  "id": "plover-glen",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book my flight to London on December 7 for the archive visit that starts on the 9th; it's paid from my Halvorsen Foundation award.",
+  "trip": {
+    "traveller_name": "Dr. Eleanor Price",
+    "traveller_title": "Associate Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of History",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "LHR",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-07",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-15",
+    "days_away": 9,
+    "booking_date": "2026-11-23",
+    "purpose": "Archive research at the British Library, London",
+    "purpose_kind": "RESEARCH",
+    "schedule": [
+      {
+        "starts_local": "2026-12-09 09:30",
+        "ends_local": "2026-12-09 17:00",
+        "what": "Archive research"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "PRIVATE_AWARD",
+    "sponsor": "The Halvorsen Foundation, a private foundation; the award's terms set no airline or travel limits",
+    "worktags": [
+      "Gift: Halvorsen Foundation research award"
+    ],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "LHR",
+        "date": "2026-12-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ba": {
+            "carrier": "BA",
+            "depart": "18:40",
+            "minutes": [
+              515
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "16:05",
+            "minutes": [
+              95,
+              545
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              70
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "17:00",
+            "minutes": [
+              70,
+              520
+            ],
+            "via": [
+              "MIA"
+            ],
+            "layovers": [
+              90
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "ba-economy",
+            "flight": "ba",
+            "cabin": "ECONOMY",
+            "fare_cents": 71500
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 78000
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 76200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "ba-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "FLY_AMERICA",
+      "INTRODUCTION",
+      "SPONSORED_AWARD"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    },
+    {
+      "lines": [
+        1259,
+        1261
+      ],
+      "sha256": "9f979d39d910c01c7dd73dda614d53dc4dd32cce07be6726dceea4ba84e98987",
+      "quote": "When assigning travel costs to a sponsored award, verify the type of sponsor (federal, private, state & local government, foundation, etc.) and apply the sponsor's travel terms and conditions accordingly. Federal sponsors require the university to meet Uniform Guidance travel regulation 2 CFR, 200.474(b) and specific",
+      "why": "apply the sponsor's travel terms"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        1055,
+        1058
+      ],
+      "quote": "the Principal Investigator (PI) of the award funded by federal award/grant must comply with the Fly America Act",
+      "why": "applies to federal awards only"
+    },
+    {
+      "lines": [
+        1027,
+        1028
+      ],
+      "quote": "you must secure approval through the Travel Approval Petition",
+      "why": "registration abroad; the record has it"
+    }
+  ],
+  "design_notes": "The award is a private foundation's, not federal, so the Fly America Act (1055-1058) does not apply, and its terms set no airline limits (1259-1261). The lowest non-refundable economy fare is British Airways' 71500."
+}

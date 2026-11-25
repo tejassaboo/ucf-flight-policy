@@ -1,0 +1,144 @@
+{
+  "id": "ember-thicket",
+  "category": "hidden_clause",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Our rocketry club, a registered student organization, is going to the launch competition in Houston on December 10. Can you book my flight on the university's account?",
+  "trip": {
+    "traveller_name": "Priya Raman",
+    "traveller_title": "Undergraduate student; president of the UCF Rocketry Club",
+    "passenger": "UCF_STUDENT",
+    "accompanies": "",
+    "department": "UCF Rocketry Club (a Registered Student Organization)",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "IAH",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-10",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-13",
+    "days_away": 4,
+    "booking_date": "2026-11-23",
+    "purpose": "The club's entry in the intercollegiate launch competition, Houston",
+    "purpose_kind": "STUDENT_ORGANIZATION_EVENT",
+    "schedule": [
+      {
+        "starts_local": "2026-12-11 08:00",
+        "ends_local": "2026-12-11 18:00",
+        "what": "Launch competition"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "CLUB_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dr. Omar Haddad",
+        "approver_title": "Faculty advisor, UCF Rocketry Club",
+        "role": "FACULTY_ADVISOR",
+        "subject": "CLUB_TRAVEL_FORM",
+        "status": "APPROVED",
+        "wording": "Approved: the club's travel form for the competition.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": [
+      "Priya also works ten hours a week as a student assistant in the College of Engineering; this trip is not part of that job.",
+      "No Spend Authorization exists for this trip."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "IAH",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ua": {
+            "carrier": "UA",
+            "depart": "08:10",
+            "minutes": [
+              160
+            ]
+          },
+          "wn": {
+            "carrier": "WN",
+            "depart": "11:00",
+            "minutes": [
+              165
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "ua-economy",
+            "flight": "ua",
+            "cabin": "ECONOMY",
+            "fare_cents": 19800
+          },
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 18400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "NOT_UNIVERSITY_BUSINESS",
+      "OUTSIDE_POLICY_SCOPE",
+      "TRAVEL_NOT_AUTHORIZED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "ELIGIBLE_RENTER",
+      "SPEND_AUTHORIZATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        594,
+        596
+      ],
+      "sha256": "0fcf026a544505ad5735e7dcb8dae98aef5c6a5a5a25e5f7880840fb4310aa3a",
+      "quote": "RSO activity is not considered official university business.",
+      "why": "RSO activity is not official university business"
+    },
+    {
+      "lines": [
+        194,
+        198
+      ],
+      "sha256": "3066d7b7525b8dc8291a78a14e0ec6a624e4c6de1c495bde345fec1364ee99f8",
+      "quote": "Per Florida Statute §112.061, travel on UCF business must be authorized in advance of travel start date. A Spend Authorization is the university's formal document for the approval to incur travel expenses and request travel and field advances. Spend Authorizations must be submitted in and fully approved before making commitments to travel or incurring expenses for traveling.",
+      "why": "travel is authorized in advance by a fully approved Spend Authorization"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 594-596 (in the vehicle-renter section): RSO activity is not considered official university business; lines 194-198: travel on UCF business is authorized in advance, and no Spend Authorization exists. Her student job does not make the club's trip university business (lines 155-156 cover travel related to the employment role). The university buys no ticket."
+}

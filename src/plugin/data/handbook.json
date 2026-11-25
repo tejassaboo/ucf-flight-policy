@@ -1,0 +1,16 @@
+{
+  "id": "ucf-flight-policy",
+  "name": "UCF Travel Manual Flight Policy",
+  "slug": "ucf-manual",
+  "title": "University of Central Florida Travel Manual (revised October 2026)",
+  "frozen_file": "ucf-manual_policy.txt",
+  "sha256": "041613bf396a66ba3e43370f3f77135ce90c71eb75447493764577a66ed70ab4",
+  "raw_pdf_sha256": "fc8a93d4ec3e261b3ebf229f2b09d7c5c978179c7190ab8a2f5bed66fe87575b",
+  "words": 13008,
+  "lines": 1513,
+  "source": "https://fa.ucf.edu/wp-content/uploads/sites/2/Travel_Manual.pdf",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 32,
+  "currency": "USD",
+  "background_offers": 0
+}

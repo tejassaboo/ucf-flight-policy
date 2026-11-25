@@ -1,0 +1,192 @@
+{
+  "id": "ivory-sedge",
+  "category": "flag",
+  "overlays": [
+    "multi_leg",
+    "approval_required"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "amber-dune",
+    "saguaro-bend"
+  ],
+  "ambiguity_note": "none: the Vice President's sign-off is pending; the text is clear",
+  "request": "Business class to Seoul on December 8, please, for the conference on the 10th. My cost center manager and the gift fund's worktag manager have signed off; the VP's sign-off is still in her queue.",
+  "trip": {
+    "traveller_name": "Dr. Min-jun Park",
+    "traveller_title": "Associate Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "ICN",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-13",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Plenary talk at the international photonics conference, Seoul",
+    "purpose_kind": "CONFERENCE",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 09:00",
+        "ends_local": "2026-12-10 17:00",
+        "what": "Conference, day one"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "PENDING",
+        "wording": "",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "ICN",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ke": {
+            "carrier": "KE",
+            "depart": "12:00",
+            "minutes": [
+              860
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "10:30",
+            "minutes": [
+              95,
+              850
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              85
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "ke-economy",
+            "flight": "ke",
+            "cabin": "ECONOMY",
+            "fare_cents": 126000
+          },
+          {
+            "slot": "ke-business",
+            "flight": "ke",
+            "cabin": "BUSINESS",
+            "fare_cents": 512000
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 119000
+          },
+          {
+            "slot": "dl-business",
+            "flight": "dl",
+            "cabin": "BUSINESS",
+            "fare_cents": 489000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "dl-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "VICE_PRESIDENT"
+    ],
+    "clauses": [
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Business qualifies (850/860-minute flights, conference within 24 hours of either landing), but lines 434-435 need the Vice President's approval besides the Cost Center Manager's and the worktag manager's; it is pending. Hold the lowest qualifying business fare, Delta's 489000, for the VP."
+}

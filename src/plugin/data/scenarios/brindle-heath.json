@@ -1,0 +1,147 @@
+{
+  "id": "brindle-heath",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My Spend Authorization for the Boston conference came back denied, but I'd still like to go. Please book the December 9 flight.",
+  "trip": {
+    "traveller_name": "Nora Feld",
+    "traveller_title": "Graduate Research Assistant",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "BOS",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-09",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-12",
+    "days_away": 4,
+    "booking_date": "2026-11-23",
+    "purpose": "Poster presentation at the New England Fluids Conference, Boston",
+    "purpose_kind": "CONFERENCE",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 08:30",
+        "ends_local": "2026-12-10 17:00",
+        "what": "Conference, day one"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "DENIED",
+        "wording": "Denied: the cost center has no travel budget left this fiscal year.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "BOS",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "b6": {
+            "carrier": "B6",
+            "depart": "07:45",
+            "minutes": [
+              165
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "06:30",
+            "minutes": [
+              95,
+              135
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              60
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "b6-economy",
+            "flight": "b6",
+            "cabin": "ECONOMY",
+            "fare_cents": 24500
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 26800
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "TRAVEL_NOT_AUTHORIZED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "INTRODUCTION",
+      "SPEND_AUTHORIZATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        194,
+        198
+      ],
+      "sha256": "3066d7b7525b8dc8291a78a14e0ec6a624e4c6de1c495bde345fec1364ee99f8",
+      "quote": "Per Florida Statute §112.061, travel on UCF business must be authorized in advance of travel start date. A Spend Authorization is the university's formal document for the approval to incur travel expenses and request travel and field advances. Spend Authorizations must be submitted in and fully approved before making commitments to travel or incurring expenses for traveling.",
+      "why": "travel is authorized in advance by a fully approved Spend Authorization"
+    },
+    {
+      "lines": [
+        112,
+        112
+      ],
+      "sha256": "e8d62c8e9dff7fba1532bd557b97faa7b77252198e4aa2a0634cb2de9b257606",
+      "quote": "All travel is contingent upon available budget and cost center approval.",
+      "why": "all travel is contingent upon budget and cost center approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 194-198: travel must be authorized in advance and the Spend Authorization fully approved before any commitment; line 112: travel is contingent upon cost center approval. It was denied: buy nothing."
+}

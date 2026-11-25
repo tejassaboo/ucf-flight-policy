@@ -1,0 +1,215 @@
+{
+  "id": "basalt-wharf",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "linden-quay",
+  "twin_fact": "Delta's Atlanta-Rome flight 545 or 535 minutes",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book business class to Rome on December 8 for the project review; the approvals are in. If business isn't allowed, economy is fine.",
+  "trip": {
+    "traveller_name": "Dr. Nadia Petrov",
+    "traveller_title": "Research Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "FCO",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-13",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Project review with the Italian Space Agency partners, Rome",
+    "purpose_kind": "MEETING",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 09:00",
+        "ends_local": "2026-12-10 17:00",
+        "what": "Project review, day one"
+      },
+      {
+        "starts_local": "2026-12-11 09:00",
+        "ends_local": "2026-12-11 13:00",
+        "what": "Project review, day two"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "FCO",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "dl": {
+            "carrier": "DL",
+            "depart": "16:30",
+            "minutes": [
+              95,
+              535
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              75
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "17:45",
+            "minutes": [
+              150,
+              515
+            ],
+            "via": [
+              "PHL"
+            ],
+            "layovers": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 91500
+          },
+          {
+            "slot": "dl-business",
+            "flight": "dl",
+            "cabin": "BUSINESS",
+            "fare_cents": 268000
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 88500
+          },
+          {
+            "slot": "aa-business",
+            "flight": "aa",
+            "cabin": "BUSINESS",
+            "fare_cents": 259000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "aa-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "TRAVELER_PAYS_UPGRADE",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "VICE_PRESIDENT",
+      "WORKTAG_MANAGER"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "At 535 minutes no single segment of either ticket is nine hours or longer, though both itineraries add to more; 'at least one segment' (431-432) rules business out. Economy: American via Philadelphia, 88500."
+}

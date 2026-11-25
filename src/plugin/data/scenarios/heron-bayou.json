@@ -1,0 +1,197 @@
+{
+  "id": "heron-bayou",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "It's a long flight to Seattle on December 8, so I'd like business class if the university allows it; otherwise economy is fine. I have to be at the site visit on the morning of the 9th.",
+  "trip": {
+    "traveller_name": "Gavin Reyes",
+    "traveller_title": "Research Engineer",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "SEA",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-10",
+    "days_away": 3,
+    "booking_date": "2026-11-23",
+    "purpose": "Site visit at the Boeing composites test facility, Seattle",
+    "purpose_kind": "SITE_VISIT",
+    "schedule": [
+      {
+        "starts_local": "2026-12-09 08:00",
+        "ends_local": "2026-12-09 16:30",
+        "what": "Site visit and test review"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "SEA",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "dl": {
+            "carrier": "DL",
+            "depart": "08:00",
+            "minutes": [
+              390
+            ]
+          },
+          "as": {
+            "carrier": "AS",
+            "depart": "10:15",
+            "minutes": [
+              395
+            ]
+          },
+          "ua": {
+            "carrier": "UA",
+            "depart": "07:10",
+            "minutes": [
+              255,
+              165
+            ],
+            "via": [
+              "DEN"
+            ],
+            "layovers": [
+              65
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 34800
+          },
+          {
+            "slot": "dl-business",
+            "flight": "dl",
+            "cabin": "BUSINESS",
+            "fare_cents": 89000
+          },
+          {
+            "slot": "as-economy",
+            "flight": "as",
+            "cabin": "ECONOMY",
+            "fare_cents": 33900
+          },
+          {
+            "slot": "ua-economy",
+            "flight": "ua",
+            "cabin": "ECONOMY",
+            "fare_cents": 35500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "as-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "TRAVELER_PAYS_UPGRADE",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        426,
+        429
+      ],
+      "sha256": "ece75575654e84ce2dfdd95f9687142d36904032348376f7123d13c75f3eeb76",
+      "quote": "Travelers preferring to secure upgraded accommodations will be required to pay the difference between the non-refundable economy/coach rate and the upgraded rate. A comparable quote of non-refundable economy airfare must be provided to serve as basis for reimbursement. The cost of an upgraded ticket cannot be reimbursed unless justified in detail.",
+      "why": "an upgrade is at the traveller's cost, against a non-refundable economy quote"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        436,
+        437
+      ],
+      "quote": "Business class is deemed to be the class between economy and first class.",
+      "why": "the name of the cabin, not its terms"
+    }
+  ],
+  "design_notes": "No flight is nine hours or longer (390 minutes nonstop), so business class is not acceptable (lines 431-433) and an upgrade would be at the traveller's cost (426-429). The traveller accepts economy: Alaska's 33900 is the lowest economy fare."
+}

@@ -1,0 +1,202 @@
+{
+  "id": "kestrel-sound",
+  "category": "hidden_clause",
+  "overlays": [
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm teaching the winter intensive course at the University of Puerto Rico. Please book my flight to San Juan on November 30; I'll be there until December 30.",
+  "trip": {
+    "traveller_name": "Dr. Lucia Ramos",
+    "traveller_title": "Associate Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Modern Languages and Literatures",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "SJU",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-11-30",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-30",
+    "days_away": 31,
+    "booking_date": "2026-11-23",
+    "purpose": "Teaching the winter intensive course at the University of Puerto Rico, San Juan",
+    "purpose_kind": "TEACHING",
+    "schedule": [
+      {
+        "starts_local": "2026-12-01 08:00",
+        "ends_local": "2026-12-01 16:00",
+        "what": "First day of classes"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Martin Keene",
+        "approver_title": "Provost and Vice President for Academic Affairs",
+        "role": "PROVOST",
+        "subject": "EXTENDED_STAY",
+        "status": "APPROVED",
+        "wording": "Approved: the teaching assignment in San Juan, November 30 - December 30, 2026.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "SJU",
+        "date": "2026-11-30",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "wn": {
+            "carrier": "WN",
+            "depart": "07:30",
+            "minutes": [
+              170
+            ]
+          },
+          "b6": {
+            "carrier": "B6",
+            "depart": "09:10",
+            "minutes": [
+              165
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "06:40",
+            "minutes": [
+              70,
+              160
+            ],
+            "via": [
+              "MIA"
+            ],
+            "layovers": [
+              75
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 19800
+          },
+          {
+            "slot": "b6-economy",
+            "flight": "b6",
+            "cabin": "ECONOMY",
+            "fare_cents": 21500
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 24600
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "wn-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "EXTENDED_STAY_APPROVAL",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "PROVOST"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "EXTENDED_STAY",
+      "INTRODUCTION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1251,
+        1253
+      ],
+      "sha256": "e385c600da46fbce5cdb8d833ce76b3f5984068413c1fadb507b8804d39ef123",
+      "quote": "Employee travel for more than thirty (30) days to a single location requires approval from the provost or appropriate vice president. Provost approval can be obtained by selecting the corresponding travel type for travel greater than 30 days on the spend authorization.",
+      "why": "over thirty days at one location needs the provost or a vice president"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        954,
+        956
+      ],
+      "quote": "When official business is more than seven days",
+      "why": "laundry, not airfare"
+    },
+    {
+      "lines": [
+        1290,
+        1290
+      ],
+      "quote": "The travel period must be for a duration of five or more days.",
+      "why": "cash advances"
+    }
+  ],
+  "design_notes": "The stay is 31 days (November 30 to December 30, counting both): more than thirty days at one location, which needs the provost's or a vice president's approval (1251-1253, a section outside the airfare rules). The provost approved it, so book the lowest non-refundable economy fare, Southwest's 19800."
+}

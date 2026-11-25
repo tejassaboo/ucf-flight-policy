@@ -1,0 +1,224 @@
+{
+  "id": "walnut-ferry",
+  "category": "boundary_twin",
+  "overlays": [
+    "personal_travel",
+    "date_arithmetic",
+    "outside_air_section"
+  ],
+  "twin_of": "cypress-lark",
+  "twin_fact": "Southwest's Monday fare 28400 or 29400 (Wednesday 28900)",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'd like to fly to San Diego on Monday the 7th to spend a few days with my sister before the conference on Thursday the 10th. If the university won't pay for the Monday flight, book me on Wednesday the 9th instead.",
+  "trip": {
+    "traveller_name": "Marisol Vega",
+    "traveller_title": "Lecturer",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Civil, Environmental and Construction Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "SAN",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-07",
+    "fallback_date": "2026-12-09",
+    "trip_end_date": "2026-12-12",
+    "days_away": 6,
+    "booking_date": "2026-11-23",
+    "purpose": "Coastal engineering conference, San Diego, December 10-11",
+    "purpose_kind": "CONFERENCE",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 08:30",
+        "ends_local": "2026-12-10 17:00",
+        "what": "Conference, day one"
+      },
+      {
+        "starts_local": "2026-12-11 08:30",
+        "ends_local": "2026-12-11 15:00",
+        "what": "Conference, day two"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": [
+      "Monday December 7 to Wednesday December 9 are personal days with family in San Diego.",
+      "No flight leaving Orlando on Thursday December 10 lands in San Diego before the conference opens."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "monday",
+        "origin": "MCO",
+        "destination": "SAN",
+        "date": "2026-12-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "wn": {
+            "carrier": "WN",
+            "depart": "09:00",
+            "minutes": [
+              345
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "07:30",
+            "minutes": [
+              165,
+              185
+            ],
+            "via": [
+              "DFW"
+            ],
+            "layovers": [
+              70
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "wn-monday",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 28400
+          },
+          {
+            "slot": "aa-monday",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 33100
+          }
+        ]
+      },
+      {
+        "name": "wednesday",
+        "origin": "MCO",
+        "destination": "SAN",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "wn": {
+            "carrier": "WN",
+            "depart": "09:00",
+            "minutes": [
+              345
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "07:15",
+            "minutes": [
+              95,
+              270
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "wn-wednesday",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 28900
+          },
+          {
+            "slot": "dl-wednesday",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 31200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "wn-monday"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "COST_SAVINGS",
+      "LOWEST_FARE",
+      "TRAVEL_TIME_DEVIATION_CHEAPER"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "ALLOWABLE_TRAVEL_TIME",
+      "PERSONAL_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        491,
+        493
+      ],
+      "sha256": "761ec4f150ce5ba9988c5018264195cf79b4e585d54e9f5e86bfa1bf6e399a02",
+      "quote": "UCF business should begin the day of or the day following a traveler's arrival at their destination.",
+      "why": "business should begin the day of or the day following arrival"
+    },
+    {
+      "lines": [
+        495,
+        497
+      ],
+      "sha256": "223d9468ffc6aff4e3835013195defdd5b80d051a457ff2e7356246098e05ff6",
+      "quote": "• Any deviation of the allowable travel time or headquarters to business destination must be supported with airfare comparable quote of just the allowable business travel time to show that the airfare selected is more economical.",
+      "why": "a deviation needs a comparable quote showing the airfare selected is more economical"
+    },
+    {
+      "lines": [
+        1457,
+        1460
+      ],
+      "sha256": "e623b3a8cf5c4e106c341ba5fc8c7cfa857ab8f5b8f6d738b073358e94d1e5dd",
+      "quote": "If the traveler arrives at a destination more than one day before official university business or returned to headquarters more than one day after the conclusion of official university business, airfare quotes must be included in the Expense Report documenting the cost of airfare if booked for arrival one day prior to university business and return one day after university business.",
+      "why": "arriving more than one day early needs a quote for arriving one day prior"
+    },
+    {
+      "lines": [
+        1402,
+        1404
+      ],
+      "sha256": "cade065dd16d365b5184376eca0883ea0d2549051ad7aa49bac5889146673e30",
+      "quote": "for business purpose from personal purpose. If the airfare includes locations and additional days other than where official business was conducted, a comparable airfare quote just for business days and business destination must be provided. UCF will only reimburse up to the business-day-only airfare.",
+      "why": "only up to the business-day-only airfare"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Business begins Thursday, so Monday is three days early: a deviation from the allowable travel time (491-493), which a comparable quote must show is more economical (495-497). The Monday fare (28400) is below the lowest Wednesday fare (28900): book Monday."
+}

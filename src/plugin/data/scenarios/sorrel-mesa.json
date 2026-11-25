@@ -1,0 +1,203 @@
+{
+  "id": "sorrel-mesa",
+  "category": "multi_rule",
+  "overlays": [
+    "multi_leg",
+    "dearer_option",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Lufthansa's nonstop to Frankfurt on December 8 is the cheapest; please book it, or if that isn't allowed, book what the policy allows. I have to be at the program review on the 10th.",
+  "trip": {
+    "traveller_name": "Dr. Ethan Brooks",
+    "traveller_title": "Associate Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "FRA",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-12",
+    "days_away": 5,
+    "booking_date": "2026-11-23",
+    "purpose": "Program review for the Office of Naval Research award, Frankfurt",
+    "purpose_kind": "MEETING",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 09:00",
+        "ends_local": "2026-12-10 17:00",
+        "what": "Program review"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "FEDERAL_AWARD",
+    "sponsor": "U.S. Department of Defense, Office of Naval Research; the award follows federal travel rules",
+    "worktags": [
+      "Grant: ONR award N0014 (naval materials)"
+    ],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Hannah Cole",
+        "approver_title": "Grant Manager, Office of Research",
+        "role": "GRANT_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization, charged to the ONR award.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "FRA",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "lh": {
+            "carrier": "LH",
+            "depart": "18:00",
+            "minutes": [
+              535
+            ]
+          },
+          "ua": {
+            "carrier": "UA",
+            "depart": "17:05",
+            "minutes": [
+              160,
+              470
+            ],
+            "via": [
+              "EWR"
+            ],
+            "layovers": [
+              90
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "16:20",
+            "minutes": [
+              95,
+              530
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "lh-economy",
+            "flight": "lh",
+            "cabin": "ECONOMY",
+            "fare_cents": 78000
+          },
+          {
+            "slot": "ua-economy",
+            "flight": "ua",
+            "cabin": "ECONOMY",
+            "fare_cents": 86500
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 91000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "ua-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLY_AMERICA_US_CARRIER_REQUIRED",
+      "NATIONAL_CARRIER_REQUIRED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "GRANT_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "FLY_AMERICA",
+      "FLY_AMERICA_EXCEPTIONS",
+      "SPONSORED_AWARD"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1055,
+        1058
+      ],
+      "sha256": "60c6b1723eb730db0a24382212153be1b397b371569558024c403f350b0d65e2",
+      "quote": "Travelers (or their designees) and the Principal Investigator (PI) of the award funded by federal award/grant must comply with the Fly America Act (41 CFR 301-10.131 through 301-10.143) to use US flag carrier or US flag carrier service provided under a code-share agreement for travel, except under specific situations. For full detail of Fly America Act, please visit https://www.gsa.gov/policy-regulations/policy/travel-management-policy/fly-america-act",
+      "why": "federal award travel uses a U.S. flag carrier"
+    },
+    {
+      "lines": [
+        1092,
+        1095
+      ],
+      "sha256": "a93fa3cf7733c570bcc6b1f39f3ccc420c655c52c10c80c016faffd186dc1211",
+      "quote": "The exceptions provided by the Open Skies Agreements for government-funded travel do not apply if your transportation is funded by the Department of Defense (DOD). Ticket cost and convenience are NOT exceptions to the Fly America Act.",
+      "why": "no Open Skies exception for DOD funding; cost and convenience are no exception"
+    },
+    {
+      "lines": [
+        1259,
+        1261
+      ],
+      "sha256": "9f979d39d910c01c7dd73dda614d53dc4dd32cce07be6726dceea4ba84e98987",
+      "quote": "When assigning travel costs to a sponsored award, verify the type of sponsor (federal, private, state & local government, foundation, etc.) and apply the sponsor's travel terms and conditions accordingly. Federal sponsors require the university to meet Uniform Guidance travel regulation 2 CFR, 200.474(b) and specific",
+      "why": "apply the sponsor's travel terms"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        1027,
+        1028
+      ],
+      "quote": "you must secure approval through the Travel Approval Petition",
+      "why": "registration abroad; the record has it"
+    }
+  ],
+  "design_notes": "The trip is on a Department of Defense award: the Fly America Act applies (1055-1058) and the Open Skies exception does not (1092-1093); United and Delta have seats, add 185 and 170 minutes to the trip, and connect in the United States, so no exception of 1081-1090 applies, and ticket cost is no exception (1094-1095). The lowest U.S. carrier fare: United via Newark, 86500."
+}

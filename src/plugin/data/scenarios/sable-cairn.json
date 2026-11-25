@@ -1,0 +1,145 @@
+{
+  "id": "sable-cairn",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Can you book my flight to Las Vegas on December 19 through the university's travel account? It's a holiday trip with friends.",
+  "trip": {
+    "traveller_name": "Bryce Holloway",
+    "traveller_title": "Laboratory Manager",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "LAS",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-19",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-23",
+    "days_away": 5,
+    "booking_date": "2026-11-23",
+    "purpose": "Holiday trip with friends",
+    "purpose_kind": "VACATION",
+    "schedule": [],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [],
+    "notes": [
+      "No Spend Authorization exists for this trip."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "LAS",
+        "date": "2026-12-19",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "wn": {
+            "carrier": "WN",
+            "depart": "08:30",
+            "minutes": [
+              310
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "07:15",
+            "minutes": [
+              95,
+              250
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              65
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 21900
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 26400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED",
+      "TRAVEL_NOT_AUTHORIZED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "NON_REIMBURSABLE",
+      "PERSONAL_TRAVEL",
+      "SPEND_AUTHORIZATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1389,
+        1391
+      ],
+      "sha256": "fae30f06dfb96e11344c6d79bdaa6d4f343cc0c0539ccf6f71d14cd5378e56eb",
+      "quote": "At times, travelers extend their travel beyond the period required to complete official university business. Travelers are not authorized to be reimbursed for expenses incurred beyond the time required to complete the official business of the university. UCF business should begin the day of or the day following the traveler's",
+      "why": "no reimbursement beyond the time the business needs"
+    },
+    {
+      "lines": [
+        1004,
+        1006
+      ],
+      "sha256": "84bfbd2b6459c89648854cf0925fef6efcf66307853110df208bd9336ce136f8",
+      "quote": "• Personal expenses (including personal phone calls or gas for a personal vehicle or any expense related to personal time).",
+      "why": "personal expenses are strictly not reimbursable"
+    },
+    {
+      "lines": [
+        194,
+        198
+      ],
+      "sha256": "3066d7b7525b8dc8291a78a14e0ec6a624e4c6de1c495bde345fec1364ee99f8",
+      "quote": "Per Florida Statute §112.061, travel on UCF business must be authorized in advance of travel start date. A Spend Authorization is the university's formal document for the approval to incur travel expenses and request travel and field advances. Spend Authorizations must be submitted in and fully approved before making commitments to travel or incurring expenses for traveling.",
+      "why": "travel is authorized in advance by a fully approved Spend Authorization"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A holiday has no university business: expenses beyond the official business are not reimbursed (1389-1391), personal expenses are strictly not reimbursable (1004-1006), and no Spend Authorization exists (194-198)."
+}

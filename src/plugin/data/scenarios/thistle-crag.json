@@ -1,0 +1,206 @@
+{
+  "id": "thistle-crag",
+  "category": "multi_rule",
+  "overlays": [
+    "date_arithmetic",
+    "dearer_option",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book business class to Tokyo on January 6 for my visiting research appointment at the University of Tokyo; I'll be there until February 19. The business-class and long-stay approvals are in. If business isn't allowed, economy is fine.",
+  "trip": {
+    "traveller_name": "Dr. Grace Tanaka",
+    "traveller_title": "Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "HND",
+    "leg": "OUTBOUND",
+    "travel_date": "2027-01-06",
+    "fallback_date": "",
+    "trip_end_date": "2027-02-19",
+    "days_away": 45,
+    "booking_date": "2026-11-23",
+    "purpose": "Visiting research appointment at the University of Tokyo, January 6 - February 19",
+    "purpose_kind": "RESEARCH",
+    "schedule": [
+      {
+        "starts_local": "2027-01-08 09:00",
+        "ends_local": "2027-01-08 17:00",
+        "what": "Laboratory work begins"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [
+      "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
+    ],
+    "requested_cabin": "BUSINESS",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Luis Navarro",
+        "approver_title": "Worktag manager, Dean's Engineering Excellence Fund",
+        "role": "WORKTAG_MANAGER",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights, charged to the gift fund.",
+        "given_on": "2026-11-16"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "BUSINESS_CLASS",
+        "status": "APPROVED",
+        "wording": "Approved: business class for this trip's flights.",
+        "given_on": "2026-11-18"
+      },
+      {
+        "approver_name": "Dr. Renata Osei",
+        "approver_title": "Vice President for Research and Innovation",
+        "role": "VICE_PRESIDENT",
+        "subject": "EXTENDED_STAY",
+        "status": "APPROVED",
+        "wording": "Approved: the research stay in Tokyo, January 6 - February 19, 2027.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "HND",
+        "date": "2027-01-06",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "jl": {
+            "carrier": "JL",
+            "depart": "11:30",
+            "minutes": [
+              835
+            ]
+          },
+          "nh": {
+            "carrier": "NH",
+            "depart": "13:00",
+            "minutes": [
+              830
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "jl-economy",
+            "flight": "jl",
+            "cabin": "ECONOMY",
+            "fare_cents": 136000
+          },
+          {
+            "slot": "jl-business",
+            "flight": "jl",
+            "cabin": "BUSINESS",
+            "fare_cents": 589000
+          },
+          {
+            "slot": "nh-economy",
+            "flight": "nh",
+            "cabin": "ECONOMY",
+            "fare_cents": 129500
+          },
+          {
+            "slot": "nh-business",
+            "flight": "nh",
+            "cabin": "BUSINESS",
+            "fare_cents": 604000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "jl-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "EXTENDED_STAY_APPROVAL",
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE",
+      "VICE_PRESIDENT",
+      "WORKTAG_MANAGER"
+    ],
+    "clauses": [
+      "EXTENDED_STAY",
+      "UPGRADED_TICKETS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1251,
+        1253
+      ],
+      "sha256": "e385c600da46fbce5cdb8d833ce76b3f5984068413c1fadb507b8804d39ef123",
+      "quote": "Employee travel for more than thirty (30) days to a single location requires approval from the provost or appropriate vice president. Provost approval can be obtained by selecting the corresponding travel type for travel greater than 30 days on the spend authorization.",
+      "why": "over thirty days at one location needs the provost or a vice president"
+    },
+    {
+      "lines": [
+        431,
+        433
+      ],
+      "sha256": "6fec90dc250fb10729bea9eca544de207bcb41608eb125da8a81a21e7a120ecd",
+      "quote": "• Business class travel is only acceptable if at least one segment of the flight shown on the purchased tickets is nine hours or longer and full -time business activity begins within 24 hours of arrival at the destination and/or return to headquarters.",
+      "why": "business class: a segment of nine hours or longer and full-time business within 24 hours"
+    },
+    {
+      "lines": [
+        434,
+        435
+      ],
+      "sha256": "5ae57c0b7ed8a372adb08f09bf321049cf77db663c85b6198b3a2c327e9d8f20",
+      "quote": "Cost considerations should be exercised when making reservations and must be approved by the Cost Center Manager, applicable worktag managers, and the appropriate Vice President. Please",
+      "why": "business class is approved by the Cost Center Manager, worktag managers and the VP"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A 45-day stay at one location needs the provost's or the appropriate vice president's approval (1251-1253): the Vice President for Research approved it. Business class qualifies (835/830-minute nonstops, laboratory work within 24 hours of either landing) and is approved (434-435): the lowest business fare, JAL's 589000."
+}

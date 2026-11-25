@@ -1,0 +1,13 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "One flight request, a real public university travel manual: book it, refuse it, or hold it for sign-off"
+summary: "An agent handles one traveller's flight request under the University of Central Florida Travel Manual (revised October 2026), read verbatim (about 13,000 words). It reads the trip record, searches a simulated flight world (real airports and airlines, synthetic schedules and fares in US dollars) and submits a decision with the offer, cabin, reason, approver and manual section. A deterministic verifier rebuilds the offers and the manual's answer itself and checks every field. Thirty-two cases cover non-refundable economy, first class, business class only on a flight of nine hours or longer with business beginning within a day and three approvals, early departures that must be cheaper, Fly America on a defense award, stays over thirty days, airline cancellations, student clubs, spouses, and the manual's own unclear words."
+highlights:
+  - "The verbatim manual: no paraphrase, no rules restated in the task"
+  - "Exact boundaries: 540 against 539 scheduled minutes per flight, 23 against 25 hours to the first session"
+  - "Unclear clauses become holds for approval, each once, with clear twins on both sides"
+  - "Fully offline: a hash-seeded flight world with unguessable offer ids"
+steps:
+  - "Name a case, for example amber-dune, with the traveller's request"
+  - "The agent reads the trip record and searches flights on the trip's route and date"
+  - "It submits BOOK, REFUSE or FLAG_FOR_APPROVAL with the offer, cabin, reason, approver and section"
+  - "The verifier recomputes the manual's answer and checks every field"

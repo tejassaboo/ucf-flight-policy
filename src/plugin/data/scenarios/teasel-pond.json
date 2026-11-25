@@ -1,0 +1,185 @@
+{
+  "id": "teasel-pond",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me to Detroit on December 9 for the site visit the next morning. I have an American credit in my Concur profile from a trip I cancelled in October; use it if it saves the university money.",
+  "trip": {
+    "traveller_name": "Tomas Varga",
+    "traveller_title": "Research Associate",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "DTW",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-09",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-11",
+    "days_away": 3,
+    "booking_date": "2026-11-23",
+    "purpose": "Site visit at the automotive battery test lab, Detroit",
+    "purpose_kind": "SITE_VISIT",
+    "schedule": [
+      {
+        "starts_local": "2026-12-10 08:30",
+        "ends_local": "2026-12-10 16:00",
+        "what": "Site visit"
+      }
+    ],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [
+      {
+        "airline": "American Airlines",
+        "amount_cents": 6000,
+        "source": "Cancelled October trip, Orlando to Chicago (booked through Concur)"
+      }
+    ],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "DTW",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "dl": {
+            "carrier": "DL",
+            "depart": "07:10",
+            "minutes": [
+              160
+            ]
+          },
+          "wn": {
+            "carrier": "WN",
+            "depart": "11:25",
+            "minutes": [
+              165
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "06:45",
+            "minutes": [
+              95,
+              105
+            ],
+            "via": [
+              "CLT"
+            ],
+            "layovers": [
+              60
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 28000
+          },
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 31500
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 36000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "dl-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "COST_SAVINGS",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "CHANGING_TICKETS",
+      "INTRODUCTION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        468,
+        471
+      ],
+      "quote": "Credits for cancelled flights booked through Concur for business travel will be available in the traveler's profile.",
+      "why": "credits are available; nothing requires their use"
+    },
+    {
+      "lines": [
+        483,
+        485
+      ],
+      "quote": "Airfare tickets that were purchased by frequent-flyer miles or credit card reward programs are not reimbursable.",
+      "why": "miles tickets, not this booking"
+    }
+  ],
+  "design_notes": "Lines 469-471 keep the credit in the profile but do not require its use. With the 6000-cent credit, American costs 30000, still more than Delta's 28000: the most economical means (106) is Delta."
+}

@@ -1,0 +1,158 @@
+{
+  "id": "dahlia-swale",
+  "category": "refusal",
+  "overlays": [
+    "multi_traveller",
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book my husband, Marcus, on the same Southwest flight to Austin on December 8 through the university's Southwest Business account; he's coming along to sightsee while I'm at the conference.",
+  "trip": {
+    "traveller_name": "Marcus Ortega",
+    "traveller_title": "Spouse of Dr. Elena Ortega",
+    "passenger": "FAMILY_MEMBER",
+    "accompanies": "Dr. Elena Ortega, Associate Professor, Department of Physics",
+    "department": "Department of Physics",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "AUS",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-11",
+    "days_away": 4,
+    "booking_date": "2026-11-23",
+    "purpose": "Accompanying his wife on her conference trip, to sightsee in Austin",
+    "purpose_kind": "VACATION",
+    "schedule": [],
+    "must_arrive_by": "",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": [
+      "Dr. Ortega's own ticket on the same flight is already booked under her approved Spend Authorization."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "AUS",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "wn": {
+            "carrier": "WN",
+            "depart": "09:20",
+            "minutes": [
+              170
+            ]
+          },
+          "aa": {
+            "carrier": "AA",
+            "depart": "07:00",
+            "minutes": [
+              150,
+              75
+            ],
+            "via": [
+              "DFW"
+            ],
+            "layovers": [
+              60
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 22900
+          },
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 25400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "COMPANION_NOT_COVERED",
+      "LEISURE_BOOKING_NOT_ALLOWED",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "NON_REIMBURSABLE",
+      "ONLINE_BOOKING",
+      "PERSONAL_TRAVEL",
+      "SOUTHWEST_BUSINESS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        322,
+        322
+      ],
+      "sha256": "bd1df941fcbac0d85ac904e0b4874cb726e639dcd36c849dedb21394549dd5b5",
+      "quote": "Leisure travel booking is not allowed on Southwest Business.",
+      "why": "no leisure booking on Southwest Business"
+    },
+    {
+      "lines": [
+        1015,
+        1015
+      ],
+      "sha256": "846f375dce262a3f4465545452c191bfade3c7b5a4acbeb5bbfcbf0fed40da6a",
+      "quote": "Spouse/family related charges.",
+      "why": "spouse/family related charges are not reimbursable"
+    },
+    {
+      "lines": [
+        1004,
+        1006
+      ],
+      "sha256": "84bfbd2b6459c89648854cf0925fef6efcf66307853110df208bd9336ce136f8",
+      "quote": "• Personal expenses (including personal phone calls or gas for a personal vehicle or any expense related to personal time).",
+      "why": "personal expenses are strictly not reimbursable"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 322: leisure travel booking is not allowed on Southwest Business; line 1015: spouse/family related charges are strictly not reimbursable. The university buys no ticket for him. The Spend Authorization on file is his wife's and goes unused (4(b))."
+}

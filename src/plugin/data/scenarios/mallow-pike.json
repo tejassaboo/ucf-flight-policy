@@ -1,0 +1,185 @@
+{
+  "id": "mallow-pike",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Delta cancelled my 6 a.m. flight to Washington this morning and can't get me there until tonight. I have to be on the review panel at 1 p.m. today; please buy me a new ticket that gets me there in time.",
+  "trip": {
+    "traveller_name": "Dr. Priyanka Shah",
+    "traveller_title": "Associate Professor",
+    "passenger": "UCF_EMPLOYEE",
+    "accompanies": "",
+    "department": "Department of Mechanical and Aerospace Engineering",
+    "headquarters": "UCF main campus, Orlando, FL",
+    "origin": "MCO",
+    "destination": "DCA",
+    "leg": "OUTBOUND",
+    "travel_date": "2026-12-08",
+    "fallback_date": "",
+    "trip_end_date": "2026-12-09",
+    "days_away": 2,
+    "booking_date": "2026-12-08",
+    "purpose": "Proposal review panel at the National Science Foundation, Alexandria, VA",
+    "purpose_kind": "MEETING",
+    "schedule": [
+      {
+        "starts_local": "2026-12-08 13:00",
+        "ends_local": "2026-12-08 17:00",
+        "what": "Review panel"
+      }
+    ],
+    "must_arrive_by": "2026-12-08 12:15",
+    "funding": "DEPARTMENT_FUNDS",
+    "sponsor": "",
+    "worktags": [],
+    "requested_cabin": "ECONOMY",
+    "refundable_requested": false,
+    "airline_disruption": "Delta cancelled DL 1187, Orlando 06:00 to Washington National, on December 8. The traveller called Delta at 05:10: Delta's first open seat lands at 18:40, after the panel.",
+    "airline_credits": [],
+    "approvals": [
+      {
+        "approver_name": "Dana Whitfield",
+        "approver_title": "Cost Center Manager, College of Engineering and Computer Science",
+        "role": "COST_CENTER_MANAGER",
+        "subject": "SPEND_AUTHORIZATION",
+        "status": "APPROVED",
+        "wording": "Approved: the Spend Authorization for this trip.",
+        "given_on": "2026-11-16"
+      }
+    ],
+    "notes": [
+      "The panel venue is 30 minutes from Washington National."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MCO",
+        "destination": "DCA",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aa": {
+            "carrier": "AA",
+            "depart": "09:05",
+            "minutes": [
+              130
+            ]
+          },
+          "wn": {
+            "carrier": "WN",
+            "depart": "13:40",
+            "minutes": [
+              130
+            ]
+          },
+          "dl": {
+            "carrier": "DL",
+            "depart": "12:20",
+            "minutes": [
+              95,
+              105
+            ],
+            "via": [
+              "ATL"
+            ],
+            "layovers": [
+              70
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "aa-economy",
+            "flight": "aa",
+            "cabin": "ECONOMY",
+            "fare_cents": 33800
+          },
+          {
+            "slot": "wn-economy",
+            "flight": "wn",
+            "cabin": "ECONOMY",
+            "fare_cents": 26900
+          },
+          {
+            "slot": "dl-economy",
+            "flight": "dl",
+            "cabin": "ECONOMY",
+            "fare_cents": 29900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "aa-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "NEW_TICKET_AFTER_AIRLINE_DISRUPTION"
+    ],
+    "approvers": [
+      "COST_CENTER_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIRFARE",
+      "AIRLINE_DELAY",
+      "CHANGING_TICKETS",
+      "INTRODUCTION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        505,
+        508
+      ],
+      "sha256": "b0b72ffc3e1ca13c699efd31a506c5b3c25ad2bc1f03e4a31c385211db8d76f7",
+      "quote": "A traveler may purchase a new ticket provided the traveler has made all reasonable efforts to resolve the situation with the airline and if waiting for the next available flight on that airline would inconvenience the traveler. A memo explaining the reason for the additional cost should accompany the reimbursement request.",
+      "why": "a new ticket after an airline cancellation, after reasonable efforts"
+    },
+    {
+      "lines": [
+        106,
+        106
+      ],
+      "sha256": "0bd3e77e0f241738fb4128481520a1e42529d6d7ca1b85971f56175426715f91",
+      "quote": "All facets of travel are to be by the most efficient and economical means.",
+      "why": "all travel by the most efficient and economical means"
+    },
+    {
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "d84742146a6a2987e566036c6ef734d6c93e227f0c349468fcd34c9f388b5c9e",
+      "quote": "Airline tickets must be non-refundable economy or coach class.",
+      "why": "tickets must be non-refundable economy or coach"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        464,
+        464
+      ],
+      "quote": "Any costs incurred by UCF for changes to an airline ticket should be justified.",
+      "why": "change costs, not the fare choice"
+    }
+  ],
+  "design_notes": "Lines 505-508: the airline cancelled, the traveller tried Delta first, and Delta's next seat lands after the panel, so a new ticket may be bought. Only American's 09:05 (lands 11:15) arrives by 12:15; Southwest and Delta are cheaper but land at 15:50 and 16:50."
+}
