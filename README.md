@@ -1,5 +1,7 @@
 # UCF Travel Manual Flight Policy
 
+**Source of the handbook:** https://fa.ucf.edu/wp-content/uploads/sites/2/Travel_Manual.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with the University of Central Florida.** The handbook is the university's public *Travel
 Manual* (revised October 2026), bundled verbatim for research. It is a published public-university manual, but
 treat it like the other original handbooks: do not publish this plugin before the course staff confirm that a
