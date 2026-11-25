@@ -115,6 +115,7 @@
     ],
     "clauses": [
       "ELIGIBLE_RENTER",
+      "INTRODUCTION",
       "SPEND_AUTHORIZATIONS"
     ],
     "unclear_phrase": ""

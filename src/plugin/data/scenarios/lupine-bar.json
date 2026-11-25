@@ -62,6 +62,15 @@
         "status": "APPROVED",
         "wording": "Approved on review: the Fly America Act exception form for this trip.",
         "given_on": "2026-11-20"
+      },
+      {
+        "approver_name": "Karen Liu",
+        "approver_title": "Travel Approval Petition reviewer, UCF Global",
+        "role": "UCF_GLOBAL",
+        "subject": "TRAVEL_APPROVAL_PETITION",
+        "status": "APPROVED",
+        "wording": "Approved: the Travel Approval Petition for this trip; the Travel Safety Registration is on file.",
+        "given_on": "2026-11-09"
       }
     ],
     "notes": [
@@ -154,7 +163,8 @@
     "approvers": [
       "COST_CENTER_MANAGER",
       "GRANT_MANAGER",
-      "NONE"
+      "NONE",
+      "UCF_GLOBAL"
     ],
     "clauses": [
       "DOCUMENTING_EXCEPTIONS",

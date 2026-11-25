@@ -110,7 +110,10 @@
     "reason_codes": [
       "COMPANION_NOT_COVERED",
       "LEISURE_BOOKING_NOT_ALLOWED",
-      "PERSONAL_TRAVEL_NOT_COVERED"
+      "NOT_UNIVERSITY_BUSINESS",
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED",
+      "TRAVEL_NOT_AUTHORIZED"
     ],
     "approvers": [
       "COST_CENTER_MANAGER",
@@ -120,7 +123,8 @@
       "NON_REIMBURSABLE",
       "ONLINE_BOOKING",
       "PERSONAL_TRAVEL",
-      "SOUTHWEST_BUSINESS"
+      "SOUTHWEST_BUSINESS",
+      "SPEND_AUTHORIZATIONS"
     ],
     "unclear_phrase": ""
   },

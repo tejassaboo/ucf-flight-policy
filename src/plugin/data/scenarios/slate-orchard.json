@@ -99,6 +99,15 @@
         "status": "APPROVED",
         "wording": "Approved: business class for this trip's flights.",
         "given_on": "2026-11-18"
+      },
+      {
+        "approver_name": "Karen Liu",
+        "approver_title": "Travel Approval Petition reviewer, UCF Global",
+        "role": "UCF_GLOBAL",
+        "subject": "TRAVEL_APPROVAL_PETITION",
+        "status": "APPROVED",
+        "wording": "Approved: the Travel Approval Petition for this trip; the Travel Safety Registration is on file.",
+        "given_on": "2026-11-09"
       }
     ],
     "notes": []

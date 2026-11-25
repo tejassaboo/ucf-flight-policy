@@ -105,6 +105,8 @@ ROLE_APPROVER = {
     Role.VICE_PRESIDENT: Approver.VICE_PRESIDENT,
     Role.PROVOST: Approver.PROVOST,
     Role.GRANT_MANAGER: Approver.GRANT_MANAGER,
+    # Lines 1027-1029: foreign travel is approved through UCF Global's Travel Approval Petition.
+    Role.UCF_GLOBAL: Approver.UCF_GLOBAL,
 }
 ECONOMY_CLAUSES = [Clause.AIRFARE, Clause.INTRODUCTION]
 
@@ -194,22 +196,24 @@ def solve(trip, offers, hidden):
         raise ValueError("only a flight back to headquarters carries answer_key_inputs (outbound_hours)")
     if trip.passenger == Passenger.FAMILY_MEMBER:
         return refuse(trip, [ReasonCode.COMPANION_NOT_COVERED, ReasonCode.PERSONAL_TRAVEL_NOT_COVERED,
-                             ReasonCode.LEISURE_BOOKING_NOT_ALLOWED],
-                      [Clause.SOUTHWEST_BUSINESS, Clause.ONLINE_BOOKING, Clause.NON_REIMBURSABLE, Clause.PERSONAL_TRAVEL],
+                             ReasonCode.LEISURE_BOOKING_NOT_ALLOWED, ReasonCode.NOT_UNIVERSITY_BUSINESS,
+                             ReasonCode.OUTSIDE_POLICY_SCOPE, ReasonCode.TRAVEL_NOT_AUTHORIZED],
+                      [Clause.SOUTHWEST_BUSINESS, Clause.ONLINE_BOOKING, Clause.NON_REIMBURSABLE, Clause.PERSONAL_TRAVEL,
+                       Clause.SPEND_AUTHORIZATIONS],
                       "Line 322: leisure travel booking is not allowed on Southwest Business; line 1015: spouse/family "
                       "related charges are strictly not reimbursable (lines 997, 1004-1006: personal expenses). The "
                       "university buys no ticket for the employee's spouse.")
     if trip.purpose_kind == Purpose.STUDENT_ORGANIZATION_EVENT:
         return refuse(trip, [ReasonCode.NOT_UNIVERSITY_BUSINESS, ReasonCode.OUTSIDE_POLICY_SCOPE,
                              ReasonCode.TRAVEL_NOT_AUTHORIZED],
-                      [Clause.ELIGIBLE_RENTER, Clause.SPEND_AUTHORIZATIONS],
+                      [Clause.ELIGIBLE_RENTER, Clause.SPEND_AUTHORIZATIONS, Clause.INTRODUCTION],
                       "Lines 594-596: RSO activity is not considered official university business; lines 194-198: "
                       "travel on UCF business is authorized in advance by a Spend Authorization, and none exists. "
                       "The university buys no ticket for the club's trip.")
     if trip.purpose_kind == Purpose.VACATION:
         return refuse(trip, [ReasonCode.PERSONAL_TRAVEL_NOT_COVERED, ReasonCode.OUTSIDE_POLICY_SCOPE,
-                             ReasonCode.TRAVEL_NOT_AUTHORIZED],
-                      [Clause.PERSONAL_TRAVEL, Clause.NON_REIMBURSABLE, Clause.SPEND_AUTHORIZATIONS],
+                             ReasonCode.TRAVEL_NOT_AUTHORIZED, ReasonCode.NOT_UNIVERSITY_BUSINESS],
+                      [Clause.PERSONAL_TRAVEL, Clause.NON_REIMBURSABLE, Clause.SPEND_AUTHORIZATIONS, Clause.INTRODUCTION],
                       "Lines 1389-1391: travelers are not reimbursed for expenses beyond the official business of the "
                       "university; lines 1004-1006: personal expenses are strictly not reimbursable; lines 194-198: "
                       "only travel on UCF business is authorized. A holiday trip gets no university ticket.")

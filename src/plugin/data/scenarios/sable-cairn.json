@@ -97,6 +97,7 @@
       "NONE"
     ],
     "reason_codes": [
+      "NOT_UNIVERSITY_BUSINESS",
       "OUTSIDE_POLICY_SCOPE",
       "PERSONAL_TRAVEL_NOT_COVERED",
       "TRAVEL_NOT_AUTHORIZED"
@@ -105,6 +106,7 @@
       "NONE"
     ],
     "clauses": [
+      "INTRODUCTION",
       "NON_REIMBURSABLE",
       "PERSONAL_TRAVEL",
       "SPEND_AUTHORIZATIONS"

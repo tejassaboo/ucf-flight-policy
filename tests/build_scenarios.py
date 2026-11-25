@@ -105,6 +105,14 @@ PROVOST = {"approver_name": "Dr. Martin Keene", "approver_title": "Provost and V
 GM = {"approver_name": "Hannah Cole", "approver_title": "Grant Manager, Office of Research", "role": "GRANT_MANAGER"}
 ADVISOR = {"approver_name": "Dr. Omar Haddad", "approver_title": "Faculty advisor, UCF Rocketry Club",
            "role": "FACULTY_ADVISOR"}
+GLOBAL = {"approver_name": "Karen Liu", "approver_title": "Travel Approval Petition reviewer, UCF Global",
+          "role": "UCF_GLOBAL"}
+# Lines 1027-1036: every trip outside the United States has its Travel Approval Petition approved by UCF Global
+# (submitted before the Spend Authorization), so no foreign booking turns on it.
+TAP_OK = {**GLOBAL, "subject": "TRAVEL_APPROVAL_PETITION", "status": "APPROVED",
+          "wording": "Approved: the Travel Approval Petition for this trip; the Travel Safety Registration is on file.",
+          "given_on": "2026-11-09"}
+FOREIGN = {"DEL", "DXB", "FCO", "DOH", "NRT", "HND", "ICN", "FRA", "HKG", "LHR", "BOG", "GRU"}
 GRANT_TAG = "Gift: Dean's Engineering Excellence Fund (an unrestricted gift)"
 
 
@@ -140,6 +148,8 @@ def trip(**fields):
     unknown = set(fields) - set(base)
     assert not unknown, unknown
     base.update(fields)
+    if {base["origin"], base["destination"]} & FOREIGN:
+        base["approvals"] = [*base["approvals"], TAP_OK]
     assert base["days_away"] > 0 and base["trip_end_date"], base["traveller_name"]
     return base
 
@@ -190,6 +200,8 @@ def scenario(id, category, overlays, request, trip_, searches, exp, must_keep, n
     }
     if hidden:
         data["answer_key_inputs"] = hidden
+    if TAP_OK in trip_["approvals"] and exp["decision"] == "BOOK":
+        exp["approvers"] = sorted({*exp["approvers"], "UCF_GLOBAL"})
     S.append(data)
 
 
@@ -623,7 +635,7 @@ scenario(
             {"ua": fl("UA", "08:10", [160]), "wn": fl("WN", "11:00", [165])},
             [of("ua-economy", "ua", "ECONOMY", 19800), of("wn-economy", "wn", "ECONOMY", 18400)])],
     expected("REFUSE", [], ["NONE"], ["NOT_UNIVERSITY_BUSINESS", "OUTSIDE_POLICY_SCOPE", "TRAVEL_NOT_AUTHORIZED"],
-             ["NONE"], ["ELIGIBLE_RENTER", "SPEND_AUTHORIZATIONS"]),
+             ["NONE"], ["ELIGIBLE_RENTER", "INTRODUCTION", "SPEND_AUTHORIZATIONS"]),
     [RSO, SA],
     "Lines 594-596 (in the vehicle-renter section): RSO activity is not considered official university business; "
     "lines 194-198: travel on UCF business is authorized in advance, and no Spend Authorization exists. Her "
@@ -757,9 +769,10 @@ scenario(
     [search("out", "MCO", "AUS", "2026-12-08",
             {"wn": fl("WN", "09:20", [170]), "aa": fl("AA", "07:00", [150, 75], via=["DFW"], layovers=[60])},
             [of("wn-economy", "wn", "ECONOMY", 22900), of("aa-economy", "aa", "ECONOMY", 25400)])],
-    expected("REFUSE", [], ["NONE"], ["COMPANION_NOT_COVERED", "LEISURE_BOOKING_NOT_ALLOWED",
-                                      "PERSONAL_TRAVEL_NOT_COVERED"], SA_ROLES,
-             ["NON_REIMBURSABLE", "ONLINE_BOOKING", "PERSONAL_TRAVEL", "SOUTHWEST_BUSINESS"]),
+    expected("REFUSE", [], ["NONE"], ["COMPANION_NOT_COVERED", "LEISURE_BOOKING_NOT_ALLOWED", "NOT_UNIVERSITY_BUSINESS",
+                                      "OUTSIDE_POLICY_SCOPE", "PERSONAL_TRAVEL_NOT_COVERED", "TRAVEL_NOT_AUTHORIZED"],
+             SA_ROLES, ["NON_REIMBURSABLE", "ONLINE_BOOKING", "PERSONAL_TRAVEL", "SOUTHWEST_BUSINESS",
+                        "SPEND_AUTHORIZATIONS"]),
     [LEISURE, SPOUSE, PERSONAL_EXP],
     "Line 322: leisure travel booking is not allowed on Southwest Business; line 1015: spouse/family related charges "
     "are strictly not reimbursable. The university buys no ticket for him. The Spend Authorization on file is his "
@@ -776,8 +789,9 @@ scenario(
     [search("out", "MCO", "LAS", "2026-12-19",
             {"wn": fl("WN", "08:30", [310]), "dl": fl("DL", "07:15", [95, 250], via=["ATL"], layovers=[65])},
             [of("wn-economy", "wn", "ECONOMY", 21900), of("dl-economy", "dl", "ECONOMY", 26400)])],
-    expected("REFUSE", [], ["NONE"], ["OUTSIDE_POLICY_SCOPE", "PERSONAL_TRAVEL_NOT_COVERED", "TRAVEL_NOT_AUTHORIZED"],
-             ["NONE"], ["NON_REIMBURSABLE", "PERSONAL_TRAVEL", "SPEND_AUTHORIZATIONS"]),
+    expected("REFUSE", [], ["NONE"], ["NOT_UNIVERSITY_BUSINESS", "OUTSIDE_POLICY_SCOPE", "PERSONAL_TRAVEL_NOT_COVERED",
+                                      "TRAVEL_NOT_AUTHORIZED"],
+             ["NONE"], ["INTRODUCTION", "NON_REIMBURSABLE", "PERSONAL_TRAVEL", "SPEND_AUTHORIZATIONS"]),
     [PERSONAL, PERSONAL_EXP, SA],
     "A holiday has no university business: expenses beyond the official business are not reimbursed (1389-1391), "
     "personal expenses are strictly not reimbursable (1004-1006), and no Spend Authorization exists (194-198).")
