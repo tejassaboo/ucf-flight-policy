@@ -314,6 +314,9 @@ def economy(trip, offers, stay):
     clauses = [*ECONOMY_CLAUSES, *stay_clauses(stay)]
     if signed(trip, Subject.BUSINESS_CLASS, Role.VICE_PRESIDENT):
         clauses.append(Clause.UPGRADED_TICKETS)
+        # Setting an approved upgrade aside to save money names the cost saving (validation w3: idi aspen-fjord;
+        # uk-dbt cobalt-weir and alder-pennant key the same pair).
+        reasons.append(ReasonCode.COST_SAVINGS)
         why += "; business class is approved, but the traveller asks for economy and permission is not obligation"
     return book(trip, [low], reasons, clauses, why + ".")
 

@@ -163,6 +163,7 @@
       "ECONOMY"
     ],
     "reason_codes": [
+      "COST_SAVINGS",
       "LOWEST_FARE"
     ],
     "approvers": [

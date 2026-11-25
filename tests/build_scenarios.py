@@ -318,7 +318,8 @@ scenario(
             {"cx": fl("CX", "12:40", [960]), "aa": fl("AA", "07:00", [330, 900], via=["LAX"], layovers=[100])},
             [of("cx-economy", "cx", "ECONOMY", 132000), of("cx-business", "cx", "BUSINESS", 545000),
              of("aa-economy", "aa", "ECONOMY", 127500), of("aa-business", "aa", "BUSINESS", 521000)])],
-    expected("BOOK", ["aa-economy"], ["ECONOMY"], ["LOWEST_FARE"], BIZ_ROLES, [*ECON, "UPGRADED_TICKETS"]),
+    expected("BOOK", ["aa-economy"], ["ECONOMY"], ["COST_SAVINGS", "LOWEST_FARE"], BIZ_ROLES,
+             [*ECON, "UPGRADED_TICKETS"]),
     [NONREF, ECONOMICAL, BUSINESS],
     "Business class would qualify (long flights, approvals on file), but the traveller asks for economy: "
     "permission is not obligation. The lowest economy fare is American's connection through Los Angeles, 127500. "
@@ -750,7 +751,8 @@ scenario(
             {"ai": fl("AI", "21:00", [900]), "ua": fl("UA", "15:00", [160, 830], via=["EWR"], layovers=[120])},
             [of("ai-economy", "ai", "ECONOMY", 124000), of("ai-business", "ai", "BUSINESS", 468000),
              of("ua-economy", "ua", "ECONOMY", 118500), of("ua-business", "ua", "BUSINESS", 455000)])],
-    expected("BOOK", ["ua-economy"], ["ECONOMY"], ["LOWEST_FARE"], BIZ_ROLES, [*ECON, "UPGRADED_TICKETS"]),
+    expected("BOOK", ["ua-economy"], ["ECONOMY"], ["COST_SAVINGS", "LOWEST_FARE"], BIZ_ROLES,
+             [*ECON, "UPGRADED_TICKETS"]),
     [NONREF, ECONOMICAL],
     "Business class would qualify and is approved, but the traveller asks for the cheapest: the business rule "
     "(431-435) permits, it does not oblige. The lowest economy fare is United via Newark, 118500.",
